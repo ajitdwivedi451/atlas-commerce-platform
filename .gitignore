@@ -1,0 +1,26 @@
+# Python & Virtual Env
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Infrastructure (Terraform)
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+# Data & Secrets
+data/sample/*
+!data/sample/.gitkeep
+*.csv
+*.json
+*.parquet
+*.pem
+*.key
+secrets/
+
+# Power BI & OS Files
+*.pbix
+.DS_Store
+Thumbs.db
