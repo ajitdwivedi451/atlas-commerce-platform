@@ -1,0 +1,50 @@
+{
+	"name": "PL_BRONZE_INGEST_MASTER",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DS_ADLS_BRONZE_CSV",
+						"type": "DatasetReference",
+						"parameters": {
+							"p_folder_path": {
+								"value": "bronze",
+								"type": "Expression"
+							},
+							"p_file_name": {
+								"value": "customer",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"childItems"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "DelimitedTextReadSettings"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2026-08-16T16:31:23Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,15 @@
+{
+	"name": "adf-atlas-dev1",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2a1735af-c5d9-4c90-a6af-9a5bd5b78de1",
+		"tenantId": "f05cdc25-00e2-4669-8be5-f31b361e2fcf"
+	}
+}
